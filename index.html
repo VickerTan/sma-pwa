@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping App</title>
+
+    <link rel="icon" href="./assets/icon-192.png" />
+    <link rel="stylesheet" href="./main.css"> 
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <p>Item List</p>
+        </nav>
+
+        <div class="form-box">
+            <form id="form-item">
+
+                <label>
+                    Name of Item:
+                    <input type="text" id="name-input" placeholder="e.g. Milk" required>
+                </label>
+
+                <label>
+                    Quantity:
+                    <input type="number" id="quantity-input" value=1>
+                </label>
+
+                <label>
+                    Price:
+                    <input type="number" id="price-input" value=0>
+                </label>
+
+                <input type="submit" value="Add Item" />
+
+            </form>
+        </div>
+
+        <div class="item-list">
+
+            <div class="item">
+                <input type="checkbox" class="checkbox" checked />
+
+                <div class="item-info">
+                    <div id="item-name">
+                        Toothbrush
+                    </div>
+                    <div id="item-price">
+                        NT$30
+                    </div>
+                    <div id="item-quantity">
+                        x 2
+                    </div>
+                </div>
+
+                <button class="delete">X</button>
+            </div>
+
+            <div class="item">
+                <input type="checkbox" class="checkbox" checked />
+
+                <div class="item-info">
+                    <div id="item-name">
+                        Toothbrush
+                    </div>
+                    <div id="item-price">
+                        NT$30
+                    </div>
+                    <div id="item-quantity">
+                        x 2
+                    </div>
+                </div>
+
+                <button id="delete">X</button>
+            </div>
+
+        </div>
+
+        <div id="total-price">
+            Total price: NT$60
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
