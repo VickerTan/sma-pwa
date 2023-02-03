@@ -8,79 +8,71 @@
 
     <link rel="icon" href="./assets/icon-192.png" />
     <link rel="stylesheet" href="./main.css"> 
+
+    <script src="./dexie.min.js"></script>
 </head>
 <body>
+    <nav>
+        <p>Item List</p>
+    </nav>
+
     <div class="container">
-        <nav>
-            <p>Item List</p>
-        </nav>
 
-        <div class="form-box">
-            <form id="form-item">
+        <form id="form-item">
 
-                <label>
-                    Name of Item:
-                    <input type="text" id="name-input" placeholder="e.g. Milk" required>
-                </label>
+            <label>
+                Name of Item:
+                <input type="text" id="name-input" placeholder="e.g. Milk" required>
+            </label>
 
-                <label>
-                    Quantity:
-                    <input type="number" id="quantity-input" value=1>
-                </label>
+            <label>
+                Quantity:
+                <input type="number" id="quantity-input" value=1>
+            </label>
 
-                <label>
-                    Price:
-                    <input type="number" id="price-input" value=0>
-                </label>
+            <label>
+                Price:
+                <input type="text" id="price-input" value=0>
+            </label>
 
-                <input type="submit" value="Add Item" />
+            <button type="submit" id="add-item-button">Add Item</button>
 
-            </form>
-        </div>
+        </form>
 
-        <div class="item-list">
+    </div>
 
-            <div class="item">
+    <div id="item-list">
+
+        <div class="item">
+            <label>
                 <input type="checkbox" class="checkbox" checked />
+            </label>
 
-                <div class="item-info">
-                    <div id="item-name">
-                        Toothbrush
-                    </div>
-                    <div id="item-price">
-                        NT$30
-                    </div>
-                    <div id="item-quantity">
-                        x 2
-                    </div>
-                </div>
-
-                <button class="delete">X</button>
+            <div class="item-info">
+                <p>Bottle</p>
+                <p>$10 x 1</p>
             </div>
 
-            <div class="item">
+            <button class="delete">X</button>
+        </div>
+
+        <div class="item purchased">
+            <label>
                 <input type="checkbox" class="checkbox" checked />
+            </label>
 
-                <div class="item-info">
-                    <div id="item-name">
-                        Toothbrush
-                    </div>
-                    <div id="item-price">
-                        NT$30
-                    </div>
-                    <div id="item-quantity">
-                        x 2
-                    </div>
-                </div>
-
-                <button id="delete">X</button>
+            <div class="item-info">
+                <p>Toothbrush</p>
+                <p>$6 x 3</p>
             </div>
 
+            <button class="delete">X</button>
         </div>
 
-        <div id="total-price">
-            Total price: NT$60
-        </div>
+    </div>
+
+    <div id="total-price">
+        Total price: NT$60
     </div>
 
     <script src="./main.js"></script>
