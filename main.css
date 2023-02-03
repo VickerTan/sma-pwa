@@ -1,133 +1,90 @@
-.container {
-    max-width: 500px;
-    margin: auto;
+* {
+    margin: unset;
+    padding: unset;
 }
 
-* {
-    margin: 0;
-    box-sizing: border-box;
+body {
+    background: #F2F2F2;
 }
 
 nav {
-    background: #0e6565;
+    background: #00805A;
+    height: 3rem;
+    line-height: 3rem;
     color: #FFF;
-    padding: 0.75rem 0.5rem;
+    padding-left: 2rem;
     margin-bottom: 1rem;
-    font-size: 1.25rem;
 }
 
-.form-box {
-    display: grid;
-    margin-bottom: 2rem;
-    width: 100%;
+.container {
+    padding: 1rem;
 }
 
-.form-box #form-item {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 15%;
-    grid-row-gap: 15%;
-    margin: 0.5rem;
+#form-item label {
+    display: block;
+    margin-bottom: 1rem;
 }
 
-#form-item label{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+#form-item input {
+    height: 2rem;
+    text-align: center;
+    border: 1px solid #BFBFBF;
 }
 
-#form-item label input {
-    margin-left: 1rem;
-    padding: 0.25rem;
-    font-size: 1rem;
+#quantity-input, #price-input {
+    width: 3rem;
 }
 
-#form-item label #name-input,
-#form-item label #price-input {
-    width: 100px;
-}
-
-#form-item label #quantity-input {
-    width: 50px;
-}
-
-#form-item label input::-webkit-inner-spin-button {
-    appearance: none;
-}
-
-#form-item input[type="submit"] {
-    margin: 0 auto;
-    width: 40%;
-    background: #0e6565;
+#add-item-button {
+    border: unset;
+    background: #00805A;
     color: #FFF;
-    border: none;
-    border-radius: 0.5rem;
-    transition: 0.3s;
+    padding: 0.5rem;
 }
 
-#form-item input[type="submit"]:hover {
+#add-item-button:active {
     opacity: 0.8;
 }
 
-#form-item input[type="submit"]:active {
-    opacity: 0.6;
-}
-
-.item-list {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin: 0 0.5rem;
+#item-list {
+    margin: 3rem 1rem 2rem;
 }
 
 .item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    background-color: #0e6565;
-    padding: 0.5rem;
-    border-radius: 0.7rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background: #EAEAEA;
+    margin-bottom: 0.5rem;
 }
 
-.item .checkbox {
-    margin-right: 1rem;
+.checkbox {
+    height: 100%;
+    width: 2.5rem;
 }
 
-.item .item-info {
-    display: flex;
-    flex: 1 1 0%;
-    background-color: #9ddada;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    font-size: 1.125rem;
+.item-info {
+    text-align: center;
 }
 
-.item div {
-    align-items: center;
+.delete {
+    margin: 0 0 0 auto;
+    border: unset;
+    background: #B10000;
+    color: #FFF;
+    font-size: 0.8rem;
+    width: 2.5rem;
+    height: 100%;
 }
 
-.item .item-info #item-name {
-    margin: 0 2rem 0 1rem;
+.delete:active {
+    opacity: 0.8;
 }
 
-.item .item-info #item-price {
-    flex: 1 1 0%;
-    margin-right: 0.5rem;
+.purchased {
+    background: #00805A;
+    color: #FFF;
 }
 
-.item .item-info #item-quantity {
-    margin-right: 0.5rem;
-}
-
-.item button {
-    margin: 0 0.5rem;
-    border-radius: 50%;
-    border: none;
-}
-
-#total-price {
-    margin: 1rem 0 0 0.5rem;
-    font-size: 1.2rem;
+.purchased p {
+    text-decoration: line-through;
 }
