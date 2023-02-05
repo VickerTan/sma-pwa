@@ -14,6 +14,7 @@ const createItems = async () => {
                 <input
                     type="checkbox"
                     class="checkbox"
+                    onchange="toggleItemStatus(event, ${item.id})"
                     ${item.isPurchased && 'checked'}
                     />
             </label>
@@ -23,7 +24,9 @@ const createItems = async () => {
                 <p>$${item.price} x ${item.quantity}</p>
             </div>
 
-            <button class="delete">X</button>
+            <button class="delete" onclick="removeItem(${item.id})">
+                X
+            </button>
         </div>
     `).join('');
 
@@ -47,3 +50,14 @@ itemForm.onsubmit = async (event) => {
     
     itemForm.reset();
 }
+
+const toggleItemStatus = async (event, id) => {
+    await db.items.update(id, { isPurchased: !!event.target.checked });
+    await createItems();
+}
+
+const removeItem = async (id) => {
+    await db.items.delete(id);
+    await createItems();
+}
+
