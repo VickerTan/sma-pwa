@@ -1,6 +1,6 @@
 {
     "name": "Shopping Record App",
-    "short_name": "Shopping RA",
+    "short_name": "Shopping App",
     "icons": [
         {
             "src": "./assets/icon-192.png",
@@ -21,7 +21,7 @@
     ],
     "theme_color": "#FFF",
     "background_color": "#FFF",
-    "start_url": "/shopping-app/",
+    "start_url": "/shoppingapp-pwa/",
     "display": "standalone",
     "orientation": "portrait"
 }
