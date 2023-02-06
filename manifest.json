@@ -1,6 +1,6 @@
 {
-    "name": "Shopping App",
-    "short_name": "Shop App",
+    "name": "Shopping Record App",
+    "short_name": "Shopping RA",
     "icons": [
         {
             "src": "./assets/icon-192.png",
